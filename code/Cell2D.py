@@ -122,7 +122,7 @@ class Cell2DViewer:
         self.draw(grid)
         anim = animation.FuncAnimation(fig, self.animate_func,
                                        init_func=self.init_func,
-                                       frames=frames, interval=interval)
+                                       frames=frames, interval=interval, figsize=(500, 500))
         return anim
 
     def init_func(self):
@@ -136,6 +136,3 @@ class Cell2DViewer:
         a = self.viewee.array
         self.im.set_array(a)
         return (self.im,)
-
-
-

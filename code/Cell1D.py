@@ -85,6 +85,8 @@ class Cell1D:
         else:
             return self.array[:, start:end]
 
+    def get_cur_val(self, index):
+        return self.array[self.next-1, index]
 
 class Wrap1D(Cell1D):
     """Implements a 1D cellular automaton with wrapping."""
